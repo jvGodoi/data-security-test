@@ -27,6 +27,9 @@ body {
     overflow-x: hidden
     
 }
+h2{
+    margin-bottom: 0.7%;
+}
 
 .titulo {
     font-family: var(--fonte-titulos);
@@ -75,6 +78,7 @@ body {
     color: var(--textos);
     font-size: 2.5em;
     font-family: var(--fonte-titulos);
+    
 }
 
 .logo__destaque {
@@ -86,15 +90,15 @@ body {
     right: 0;
     padding-right: 12px;
 }
-.btn-item{
-    width: 25px;
-    border: 1.5px solid red;
-    margin: 6px 0;
 
-}
 .cabecalho {
     padding: 10%;
 
+}
+.dados{
+    text-decoration: 2px underline wavy var(--titulos);
+    color: var(--titulos);
+    font-style: italic;
 }
 .cabecalho__navecacao__links {
     display: flex;
@@ -134,16 +138,19 @@ body {
 .cabecalho__textos {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 2% 0;
     padding: 1% 0;
+    position: relative;
 }
 
-.cabecalho__textos__titulo {
-    font-size: 4.2em;
+h1.cabecalho__textos__titulo{
+    font-size: 5em;
     text-transform: uppercase;
     color: var(--destaques);
+    text-shadow: 1px 1px 1px black;
+    line-height: 80px;
 }
 
 .cabecalho__textos__paragrafo {
@@ -156,23 +163,30 @@ body {
 .cabecalho__redes {
     display: flex;
     justify-content: center;
-    margin: 2% 0;
-    gap: 0.8em;
-    cursor: pointer;
+    margin: 3% 0;
+    gap: 1.5em;
+    cursor: pointer; 
+    padding: 5% 0;
 }
 
 .fa-brands {
     color: var(--destaques);
     font-size: 2.1em;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 .data{
     width: 30%;
     box-shadow: 1px 1px 20px 3px var(--destaques);
     border-radius: 100%;
+    filter: grayscale(100);
+    transition: 0.3s;
+}
+.data:hover{
+
+    filter: grayscale(0);
 }
 .historia__img{
-    width: 40%;
+    width: 40vw;
 }
 /* .historia{
     display: flex;
@@ -195,7 +209,6 @@ body {
 
 .historia__textos__titulo {
     text-align: center;
-    margin-bottom: 1%;
     text-transform: uppercase;
     font-size: 2em;
     position: relative;
@@ -211,9 +224,6 @@ body {
     padding-right: 4%;
 }
 
-.dist {
-    text-indent: 2em;
-}
 
 .importancia__alinhamento {
     display: flex;
@@ -241,16 +251,16 @@ body {
 }
 
 .importancia__secoes__titulo {
-    border: 2px solid var(--titulos);
     border-radius: 8px;
     cursor: pointer;
     padding: 24px;
 }
+.secao__risco, .secao__importante{
+    margin-top: 25px;
+}
 
 .importancia__secoes__paragrafo {
-    border-right: 1px solid var(--titulos);
-    border-left: 1px solid var(--titulos);
-    border-bottom: 1px solid var(--titulos);
+
     margin-top: -8px;
     padding: 0 24px;
     height: 0;
@@ -286,6 +296,19 @@ body {
 
 .riscos__textos__paragrafo {
     text-align: center;
+}
+.borda__secao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 2px solid var(--titulos);
+    border-left: 2px solid var(--titulos);
+    border-bottom: 2px solid var(--titulos);
+    border-top: 2px solid var(--titulos);
+    border-radius: 10px;
+}
+.solid{
+    display: inline;
 }
 
 .lgpd__agentes {
@@ -334,9 +357,10 @@ body {
     background-color: #f3f3f3;
     margin-top: 3%;
     padding-left: 6%;
+    padding-top: 5%;
 }
 .agentes{
-    height: 60%
+    height: 80%
 }
 
 .penalizacao{
@@ -385,7 +409,7 @@ body {
     margin: 3% 0;
 }
 .duvidas__lista__item{
-    margin: 3% 0;
+    margin-top: 25px;
 }
 .importancia__secoes__paragrafo {
     border-right: 1px solid var(--titulos);
@@ -468,6 +492,14 @@ body {
     text-transform: uppercase;
     display: block;
 }
+@media (max-width: 1200px){
+    .data{
+        width: 25vw;
+    }
+    .importancia__secoes__titulo{
+        width: 90%;
+    }
+}
 @media (max-width: 800px){
 
     .cabecalho__navegacao{
@@ -496,6 +528,9 @@ body {
     {
         margin-top: 20px;
     }
+    .cabecalho__redes{
+        gap: 1.5em;
+    }
     #menu{
         display: flex;
         height: 0px;
@@ -516,15 +551,16 @@ body {
         display: none;
     }
     .cabecalho{
-        height: 50vh;
-        margin: 8% 2% 3% 2%;
+        height: 100vh;
+        margin: 8% 0;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0 3%;
     }
-    .cabecalho__textos__titulo{
-        font-size: 2.5em;
+    h1.cabecalho__textos__titulo{
+        font-size: 3.5em;
+        line-height: 65px;
     }
 
     .cabecalho__navecacao__links{
@@ -533,11 +569,23 @@ body {
 
     .fa-brands{
         margin-top: 4%;
-        font-size: 2.1em;
+        font-size: 2.3em;
+    }
+    .historia__textos__titulo{
+        font-size: 1.5em;
     }
     .importancia__alinhamento{
         flex-direction: column-reverse;
         padding: 0;
+    }
+    .importancia__secoes__titulo{
+        margin: 1.5% 1%;
+        font-size: 0.8em;
+        width: 90%;
+        box-sizing: border-box;
+    }
+    .riscos__textos__paragrafo{
+        text-align: left;
     }
     .alinhamento{
         display: flex;
@@ -564,7 +612,7 @@ body {
         justify-content: center;
     }
     .agentes{
-        width: 80vw;
+        width: 90vw;
     }
     .penalizacao{
         display: flex;
@@ -576,6 +624,7 @@ body {
     }
     .penalizacao__textos__titulo{
         margin-bottom: 4%;
+        font-size: 1.5em;
     }
     .animated{
         width: 85%;
@@ -583,6 +632,9 @@ body {
     }
     .duvidas__lista{
         padding: 0;
+    }
+    .duvidas__textos__titulo{
+        font-size: 1.5em;
     }
     .rodape__secoes{
         display: flex;
@@ -596,5 +648,15 @@ body {
         display: flex;
         flex-direction: column;
         gap: 8px;
+    }
+    @media (max-width: 450px){
+        h1.cabecalho__textos__titulo{
+            font-size: 2.5em;
+            line-height: 43px;
+        }
+        .fa-brands{
+            font-size: 2em;
+        }
+
     }
 }
